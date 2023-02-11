@@ -1,23 +1,32 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import { setupCounter } from './counter'
+import './css/style.css'
+import FullList from './model/FullList'
+import ListItem from './model/Listitem'
+import ListTemplate from './templates/LitstTemplate'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+const initApp = (): void => {
+const fullList = FullList.instance
+const template = ListTemplate.instance
+
+
+const itemEntryForm = document.getElementById("itemEntryForm") as HTMLAllCollection
+
+
+itemEntryForm.addEventListener("submit", (event: SubmitEvent): void => {
+  event.preventDefault()
+
+  const input = document.getElementById("newItem") as HTMLInput
+})
+constclearItems = document.getElementById("clearItemsButton") as HTMLButtonElement
+
+clearItems.add
+}
+
+FullList.addItem(new)
+
+
+
+document.addEventListener("DOMContentLoaded", initApp)
+
+
+
